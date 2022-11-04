@@ -4,12 +4,15 @@
   "description": "",
   "main": "app.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "filereader": "^0.10.3",
-    "fs": "0.0.1-security"
+    "fs": "0.0.1-security",
+    "glob": "^8.0.3",
+    "nodemon": "^2.0.20",
+    "xlsx": "^0.18.5"
   }
 }
