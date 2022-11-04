@@ -15,10 +15,10 @@ function transform(line) {
   const regexpStr = `({.*A00615.*align[ ]*:[ ]*)['"](center|left|right)['"]`;
   const regexp = new RegExp(regexpStr, "g");
   let replacedLine;
-  // if (line.match(regexp)) {
-  //   replacedLine = line.replace(/['"](center|left|right)['"]/, "commonui.alignType.order");
-  // } else {
-  replacedLine = line;
-  // }
+  if (line.match(regexp)) {
+    replacedLine = line.replace(/['"](center|left|right)['"]/, "commonui.alignType.order");
+  } else {
+    replacedLine = line;
+  }
   this.output.write(`${replacedLine}\n`);
 }

@@ -74,7 +74,7 @@ $(document).ready(function(){
 		,form	: $('#search-form')
 		,options : { multiSelect : true }
 		,columns : [
-		            { name: '<@spring.message "A00615" />',                         field: 'rowSeq',	        width:50, 	 align:'center', resizable: false },    // 번호
+		            { name: '<@spring.message "A00615" />',                         field: 'rowSeq',	        width:50, 	 align:commonui.alignType.order, resizable: false },    // 번호
 		            { name: '<@spring.message "A00920" />',                         field: 'changeStatus',	    width:80, 	 align:'center', formatter : changeStatusFormatter },  // 신청종류
                     { name: '<@spring.message "A05500" />',          field: 'class_id', 	        width:100, 	align:'center', formatter : getCodeFormatter(codeClass) },                  // 통합코드유형
                     { name: '<@spring.message "word.or.ternname" />',                         field: 'termName', 	    width:200 	 },                                                                         // 통합코드명
@@ -182,7 +182,7 @@ $(document).ready(function(){
         url	: 'codeTransferConfirmPathList'
         ,options : { }
         ,columns : [
-            { name: '<@spring.message "A00615" />', width:50,   field : 'SEQ', align:'center', resizable: false },
+            { name: '<@spring.message "A00615" />', width:50,   field : 'SEQ', align:commonui.alignType.order, resizable: false },
             { name: '<@spring.message "A00284" />', width:100,  field : 'GUBUN_STR',    align:'center' },
             { name: '<@spring.message "A03065" />', width:100,  field : 'CONFIRM_STR',  align:'center' },
             { name: '<@spring.message "A00287" />', width:100,  field : 'STATUS_STR',   align:'center' },
