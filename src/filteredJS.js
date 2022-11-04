@@ -5,11 +5,7 @@ const checkFile = async (filename, regexpStr) => {
   try {
     const contents = await fsPromises.readFile(filename, "utf-8");
     const matchedLines = contents.match(regexp);
-    if (matchedLines?.length > 0) {
-      return true;
-    } else {
-      return false;
-    }
+    return matchedLines?.length > 0;
   } catch (err) {
     console.log("checkFile error:", err);
   }

@@ -41,7 +41,7 @@ var $codeGrid = $('#code-approve-grid').msGrid({
     param : { oi_id : '${RequestParameters.oi_id}' },
     options: {},
     columns: [
-        { name: '<@spring.message "A00615" />',                         field: 'rowSeq',	        width:50, 	 align:commonui.alignType.order, resizable: false, formatter : commonui.formatters.seqFormatter },    // 번호
+        { name: '<@spring.message "A00615" />',                         field: 'rowSeq',	        width:50, 	 align:"center", resizable: false, formatter : commonui.formatters.seqFormatter },    // 번호
         { name: '<@spring.message "integration.code.type" />',          field: 'class_id',	        width:80, 	 align:'center', formatter : getCodeFormatter(codeClass) },    // 통합코드유형
         { name: '<@spring.message "A03915" />',                         field: 'changeStatus',	    width:80, 	 align:'center', formatter : getCodeFormatter(status) },  // 변경구분
         { name: '<@spring.message "word.or.ternname" />',                         field: 'termName',	    width:150 },    // 통합코드명

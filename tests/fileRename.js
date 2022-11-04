@@ -12,12 +12,3 @@ fs.rename("rename.txt", "deletename.txt", (error) => {
     getCurrentFilenames();
   }
 });
-
-// Function to get current filenames
-// in directory
-function getCurrentFilenames() {
-  console.log("Current filenames:");
-  fs.readdirSync(__dirname).forEach((file) => {
-    console.log(file);
-  });
-}
