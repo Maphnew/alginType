@@ -1,8 +1,8 @@
 const readExcel = require("./src/readExcel");
 const allFilesJS = require("./src/allFileJS");
 const filteredJS = require("./src/filteredJS");
-const { replaceAndDuplicate, removePostfix } = require("./src/replaceAndDuplicate");
-const renameAddPostfix = require("./src/renameFile");
+const replaceAndDuplicate = require("./src/replaceAndDuplicate");
+const { addPostfix, removePostfix } = require("./src/renameFile");
 const removeOld = require("./src/removeOld");
 const path = require("path");
 
@@ -18,7 +18,7 @@ const main = async (excel, dirName) => {
     await replaceAndDuplicate(file, "out", xlData);
   }
   for (const file of filtered) {
-    await renameAddPostfix(file, "old");
+    await addPostfix(file, "old");
   }
   const outFiles = filtered.map((file) => `${file}-out`);
   for (const file of outFiles) {

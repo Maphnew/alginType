@@ -32,18 +32,4 @@ const replaceAndDuplicate = (filename, postfix, xlData) => {
   });
 };
 
-const removePostfix = (file, postfix) => {
-  const removed = file.replace(`-${postfix}`, "");
-  return new Promise((resolve, reject) => {
-    fs.rename(file, removed, (error) => {
-      if (error) {
-        reject("renameFile", error);
-      } else {
-        console.log(`File Renamed: ${file} to ${removed}\n`);
-        resolve();
-      }
-    });
-  });
-};
-
-module.exports = { replaceAndDuplicate, removePostfix };
+module.exports = replaceAndDuplicate;
